@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registrar un lugar turístico</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="stacked" class="textInput">Nombre del lugar</ion-label>
+    <ion-input type="text" [(ngModel)]="nameplace" name="nameplace">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked" class="textInput">Descripción</ion-label>
+    <ion-input
+      type="text"
+      placeholder="Descripción del lugar"
+      [(ngModel)]="descriplace"
+      name="descriplace"
+    >
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked" class="textInput">Característica</ion-label>
+    <ion-input
+      placeholder="Característica del lugar"
+      [(ngModel)]="characplace"
+      type="text"
+      name="characplace"
+    >
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked" class="textInput"> Ubicación </ion-label>
+  </ion-item>
+  <div id="map"></div>
+  <ion-item>
+    <ion-label class="textInput">Cargar imagen</ion-label>
+    <ion-button class="btn-upload" for="file-upload">
+      <label for="file-upload">
+        Subir imagen
+        <input
+          (change)="newImageUpload($event)"
+          id="file-upload"
+          style="display: none"
+          type="file"
+        />
+      </label>
+    </ion-button>
+  </ion-item>
+
+
+  <ion-item>
+    <img [src]="newImage" />
+  </ion-item>
+
+  <ion-button
+    expand="block"
+    shape="round"
+    type="submit"
+    (click)="guardarProducto()"
+    >Guardar</ion-button
+  >
+</ion-content>
