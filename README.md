@@ -49,3 +49,4 @@ Para poder instalar de forma local el proyecto se seguirá la siguiente secuenci
  ionic serve
 ```
 > Link del video: https://youtu.be/j4vVwyXgNd8
+> Link del app web: https://turismoapp-fe7a6.web.app/home
